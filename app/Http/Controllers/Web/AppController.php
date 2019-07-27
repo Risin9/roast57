@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Http\Controller\Web;
+namespace app\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 
@@ -10,7 +10,11 @@ class AppController extends Controller
     {
         return view('app');
     }
-    
+
+    public function getLogin()
+    {
+        return view('login');
+    }
 }
 
 
