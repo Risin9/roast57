@@ -33,6 +33,7 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
+import Vue from 'vue';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -40,6 +41,3 @@ if (token) {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app'
-});
