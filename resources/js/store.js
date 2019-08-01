@@ -11,8 +11,10 @@ require ('es6-promise').polyfill();
 
  Vue.use( Vuex );
 
+ import { cafes } from './modules/cafes.js';
+
  export default new Vuex.Store({
      modules: {
-
+        cafes
      }
  })

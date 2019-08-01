@@ -64,7 +64,7 @@ export const cafes = {
         }
     },
     getters: {
-        getCafesLoadStatus( status ){
+        getCafesLoadStatus( state ){
             return state.cafesLoadStatus;
         },
 
@@ -77,6 +77,7 @@ export const cafes = {
         },
 
         getCafe( state ){
-            return state.cafe;        }
+            return state.cafe;
+        }
     }
 }
