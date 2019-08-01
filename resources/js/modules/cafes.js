@@ -48,6 +48,21 @@ export const cafes = {
                     commit( 'setCafeLoadStatus', 3);
                 });
         }
-    }
+    },
+    mutations: {
+        setCafesLoadStatus( state, status){
+            state.cafeLoadStatus = status;
+        },
+        setCafes( state, cafes ){
+            state.cafes = cafes;
+        },
+        setCafeLoadStatus( state, status){
+            state.cafeLoadStatus = status;
+        },
+        setCafe( state, cafe){
+            state.cafe = cafe;
+        }
+    }    
 
+    
 }
