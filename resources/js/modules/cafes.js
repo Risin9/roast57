@@ -62,7 +62,21 @@ export const cafes = {
         setCafe( state, cafe){
             state.cafe = cafe;
         }
-    }    
+    },
+    getters: {
+        getCafesLoadStatus( status ){
+            return state.cafesLoadStatus;
+        },
 
-    
+        getCafes( state ){
+            return state.cafes;
+        },
+
+        getCafeLoadStatus( state ){
+            return state.cafeLoadStatus;
+        },
+
+        getCafe( state ){
+            return state.cafe;        }
+    }
 }
