@@ -1753,7 +1753,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  created: function created() {
+    this.$store.dispatch('loadCafes');
+  },
+  computed: {
+    //get cafes loading status
+    cafesLoadStatus: function cafesLoadStatus() {
+      return this.$store.getters.getCafesLoadStatus;
+    },
+    // get cafes
+    cafes: function cafes() {
+      return this.$store.getters.getCafes;
+    }
+  }
+});
 
 /***/ }),
 
@@ -43056,7 +43072,52 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _c(
+      "span",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.cafesLoadStatus == 1,
+            expression: "cafesLoadStatus == 1"
+          }
+        ]
+      },
+      [_vm._v("加载中...")]
+    ),
+    _vm._v(" "),
+    _c(
+      "span",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.cafesLoadStatus == 2,
+            expression: "cafesLoadStatus == 2"
+          }
+        ]
+      },
+      [_vm._v("数据加载成功！")]
+    ),
+    _vm._v(" "),
+    _c(
+      "span",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.cafesLoadStatus == 3,
+            expression: "cafesLoadStatus == 3"
+          }
+        ]
+      },
+      [_vm._v("数据加载失败！")]
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -59480,15 +59541,15 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
   }, {
     path: '/cafes',
     name: 'cafes',
-    component: vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('Cafes', __webpack_require__(/*! ./pages/Cafes.vue */ "./resources/js/pages/Cafes.vue"))
+    component: vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('Cafes', __webpack_require__(/*! ./pages/Cafes.vue */ "./resources/js/pages/Cafes.vue")["default"])
   }, {
     path: '/cafes/new',
     name: 'newcafe',
-    component: vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('NewCafe', __webpack_require__(/*! ./pages/NewCafe.vue */ "./resources/js/pages/NewCafe.vue"))
+    component: vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('NewCafe', __webpack_require__(/*! ./pages/NewCafe.vue */ "./resources/js/pages/NewCafe.vue")["default"])
   }, {
     path: '/cafes/:id',
     name: 'cafe',
-    component: vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('Cafe', __webpack_require__(/*! ./pages/Cafe.vue */ "./resources/js/pages/Cafe.vue"))
+    component: vue__WEBPACK_IMPORTED_MODULE_0___default.a.component('Cafe', __webpack_require__(/*! ./pages/Cafe.vue */ "./resources/js/pages/Cafe.vue")["default"])
   }]
 }));
 console.log(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);

@@ -27,17 +27,17 @@ export default new VueRouter({
         {
             path: '/cafes',
             name: 'cafes',
-            component: Vue.component('Cafes', require('./pages/Cafes.vue'))
+            component: Vue.component('Cafes', require('./pages/Cafes.vue').default)
         },
         {
             path: '/cafes/new',
             name: 'newcafe',
-            component: Vue.component('NewCafe', require('./pages/NewCafe.vue'))
+            component: Vue.component('NewCafe', require('./pages/NewCafe.vue').default)
         },
         {
             path: '/cafes/:id',
             name: 'cafe',
-            component: Vue.component('Cafe', require('./pages/Cafe.vue'))
+            component: Vue.component('Cafe', require('./pages/Cafe.vue').default)
         },
     ]
 });
